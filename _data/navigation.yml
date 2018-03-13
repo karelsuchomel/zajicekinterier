@@ -16,7 +16,7 @@ mainNavigationItems:
 forehead_strip_navigation_title: Forehread strip navigation - left
 foreheadNavigationItemsLeft:
 
-- title: Přihlásit / <strong>registrovat</strong>
+- title: Přihlásit / registrovat
   url: registration.html
   mobileVisibility: true
 

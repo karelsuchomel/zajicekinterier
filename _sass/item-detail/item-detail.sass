@@ -1,5 +1,8 @@
+@import "_partials.sass"
+
 .gallery-container
-	margin: 18px 0px
+	padding: 18px 0px
+	background: white
 	width: 100%
 	overflow-y: hidden
 
@@ -10,3 +13,38 @@
 			max-height: 250px
 			display: block
 			float: left
+
+.item-card
+	margin: 18px 0px 24px
+	h1
+		font-size: 24px
+		line-height: 30px
+		font-weight: 500
+		margin: 18px 12px 6px
+	h2
+		font-family: 'DejaVuSerif', serif
+		font-weight: 400
+		font-size: 15px
+		line-height: 18px
+		margin: 6px 12px 18px
+
+.item-action-button
+	color: white
+	font-size: 16px
+	border-radius: 5px
+	padding: 12px 24px
+	display: block
+	width: 180px
+	margin: 18px auto
+	text-align: center
+	cursor: pointer
+	@extend .noselect
+
+.buy-now-button
+	@extend .item-action-button
+	box-shadow: 0px 5px 20px rgba(125,125,125, 0.65)
+	background-color: #E84E4E
+	
+.add-to-basket-button
+	@extend .item-action-button
+	background-color: #EC6A6A
