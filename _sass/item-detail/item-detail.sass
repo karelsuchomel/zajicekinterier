@@ -16,17 +16,39 @@
 
 .item-card
 	margin: 18px 0px 24px
+	padding: 0px 12px
 	h1
 		font-size: 24px
 		line-height: 30px
 		font-weight: 500
-		margin: 18px 12px 6px
+		margin: 18px 0px 6px
 	h2
 		font-family: 'DejaVuSerif', serif
 		font-weight: 400
 		font-size: 15px
 		line-height: 18px
-		margin: 6px 12px 18px
+		margin: 6px 0px 18px
+
+	.price-container
+		margin: 18px 0px
+
+		.price-number
+			font-size: 22px
+			line-height: 22px
+			font-weight: 500
+		.currency
+			font-size: 18px
+			line-height: 18px
+
+		.price-without-tax
+			color: #666
+			.price-number
+				font-size: 15px
+				line-height: 20px
+				font-weight: 400
+			.currency
+				font-size: 13px
+				line-height: 16px
 
 .item-action-button
 	color: white
@@ -48,3 +70,22 @@
 .add-to-basket-button
 	@extend .item-action-button
 	background-color: #EC6A6A
+
+.recomended-products-container
+	padding: 18px 0px
+	width: 100%
+	box-sizing: border-box
+	overflow-y: hidden
+	color: #666
+	font-size: 15px
+
+	.horizontal-overflow-wrapper
+		width: 1000px
+
+		> img
+			max-height: 150px
+			display: block
+			float: left
+			margin: 0px 12px
+			box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2)
+			border-radius: 4px
