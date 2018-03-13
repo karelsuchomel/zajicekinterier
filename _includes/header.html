@@ -1,0 +1,40 @@
+<div class="forehead-stripe">
+	<nav>
+		<ul class="stripe-navigation left">
+			{% for item in site.data.navigation.foreheadNavigationItemsLeft %}
+			<li
+				{% if item.mobileVisibility == true %}
+				class="mobile-visible"
+				{% endif %}
+			><a href="{{ item.url }}">{{ item.title }}</a></li>
+			{% endfor %}
+		</ul>
+		<ul class="stripe-navigation right">
+			{% for item in site.data.navigation.foreheadNavigationItemsRight %}
+			<li
+				{% if item.mobileVisibility == true %}
+				class="mobile-visible"
+				{% endif %}
+			><a href="{{ item.url }}">{{ item.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</nav>
+</div>
+
+<div id="header-container">
+	<div id="header-content">
+		<div id="logo"></div>
+		<div class="category-wrapper">
+			<label for="mobile-navigation-trigger" class="mobile-navigation-toggle">Kategorie</label>
+			<input type="checkbox" id="mobile-navigation-trigger">
+			<div id="navigation-container">
+				<ul>
+					{% for item in site.data.navigation.mainNavigationItems %}
+					<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+					{% endfor %}
+				</ul>
+				<label for="mobile-navigation-trigger" class="navigation-background-toggle"></label>
+			</div>
+		</div>
+	</div>
+</div>

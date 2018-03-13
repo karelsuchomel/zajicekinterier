@@ -1,0 +1,216 @@
+@import "_partials.sass"
+
+@import "forehead-stripe-navigations"
+
+#header-container
+	background: #E6E6E6
+
+	#header-content
+		max-width: 1280px
+		margin: 0 auto
+		&:after
+			content: ""
+			display: block
+			clear: both
+
+	#logo
+		margin: 12px 0px 12px 12px
+		width: 30px
+		height: 30px
+		float: left
+		background:
+			image: url('../images/icon.png')
+			size: contain
+			repeat: no-repeat
+
+	.category-wrapper
+		position: relative
+		float: left
+		&:after
+			content: ""
+			display: block
+			clear: both
+
+	.mobile-navigation-toggle
+		position: relative
+		z-index: 2
+		display: block
+		float: left
+		padding: 5px 8px
+		margin: 12px 12px
+		border-radius: 4px
+		border: 1px solid #E84E4E
+		color: #E84E4E
+		font-size: 15px
+		line-height: 16px
+		font-weight: 500
+		box-shadow: none
+		transition: box-shadow 0.2s
+		cursor: pointer
+		@extend .noselect
+
+		&:before
+			content: ""
+			display: inline-block
+			height: 15px
+			width: 15px
+			margin-right: 6px
+			background:
+				image: url('../images/open_menu_black.svg')
+				size: contain
+				position: 0px 3px
+				repeat: no-repeat
+
+		&:hover, &:active
+			box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2)
+			background: white
+
+	input
+		display: none
+
+		&:checked 
+			+ #navigation-container
+				display: block
+
+	#navigation-container
+		position: relative
+		display: none
+	ul
+		position: absolute
+		z-index: 2
+		list-style: none
+		padding: 0px
+		margin: 0px
+		top: 50px
+		//top: 66px
+		right: 18px
+		background-color: white
+		border: 1px solid #DDD
+		box-shadow: 0px 2px 5px rgba(0,0,0,0.2)
+		animation: scaleUpFromCenter 0.3s forwards
+
+		> li
+			position: relative
+			z-index: 3
+			font-size: 13px
+			font-weight: 500
+			color: #555
+			padding: 10px 80px 10px 14px
+			margin: 8px 0px
+			cursor: pointer
+			@extend .noselect
+
+			> a
+				text-decoration: none
+
+			&:hover, &:focus
+				background-color: #DCDBDA
+			&:active
+				background-color: #C3C2C0
+
+		&:before
+			content: ""
+			display: block
+			position: absolute
+			z-index: 2
+			width: 14px
+			height: 14px
+			top: -6px
+			right: 46px
+			background-color: white
+			transform: rotate(45deg)
+		
+	.navigation-background-toggle
+		position: fixed
+		z-index: 1
+		background-color: rgba(0,0,0,0.3)
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		animation: justAppearFromThinAir 0.4s forwards
+
+@media screen and (min-width: 640px)
+	#header-container #logo
+		margin: 18px 0px 18px 18px
+		width: 206px
+		height: 38px
+		float: left
+		background:
+			image: url('../images/logo.png')
+			size: contain
+			repeat: no-repeat
+
+	.mobile-navigation-toggle
+		position: relative
+		z-index: 2
+		padding: 9px 14px
+		margin: 18px
+		border-radius: 4px
+		border: 1px solid #E84E4E
+		color: #E84E4E
+		font-size: 15px
+		line-height: 16px
+
+		&:before
+			content: ""
+			display: inline-block
+			height: 15px
+			width: 15px
+			margin-right: 10px
+			background:
+				image: url('../images/open_menu_black.svg')
+				size: contain
+				position: 0px 3px
+				repeat: no-repeat
+
+		&:hover
+			box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2)
+		&:active
+			background: rgba(255, 255, 255, 0.45)
+
+@media screen and (min-width: 960px)
+	nav#main-navigation
+		#logotype
+
+		.mobile-navigation-toggle
+			display: none
+
+		#navigation-container
+			display: inline-block
+			float: right
+
+		ul
+			position: static
+			top: 0px
+			right: 0px
+			background-color: transparent
+			border: 0px
+			box-shadow: none
+			animation: none
+
+			&:before
+				display: none
+
+			> li
+				color: white
+				float: left
+				background-color
+				padding: 10px 16px
+				line-height: 16px
+				margin: 8px 8px
+				border-radius: 4px
+				background-color: rgba(0, 0, 0, 0.5)
+
+				&:hover, &:focus
+					background: rgba(255, 255, 255, 0.3)
+				&:active
+					background: rgba(255, 255, 255, 0.4)
+
+			&:after
+				content: ""
+				display: block
+				clear: both
+			
+		.navigation-background-toggle
+			display: none

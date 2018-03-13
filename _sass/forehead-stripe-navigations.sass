@@ -1,0 +1,55 @@
+.forehead-stripe
+	background: white
+
+	nav
+		max-width: 1280px
+		padding: 0px 12px
+		margin: 0 auto
+		&:after
+			display: block
+			content: ""
+			clear: both
+
+	.stripe-navigation.left
+		float: left
+	.stripe-navigation.right
+		float: right
+
+	ul.stripe-navigation
+		display: inline-block
+		margin: 0px
+		padding: 6px 0px
+		&:after
+			display: block
+			content: ""
+			clear: both
+
+		li.mobile-visible
+			display: block
+
+		li
+			display: none
+			margin-right: 12px
+			float: left
+
+			&:last-of-type
+				margin-right: 0px
+
+			&:last-of-type a
+				border-right: none
+				padding-right: 0px
+
+			a
+				display: block
+				font-size: 13px
+				line-height: 18px
+				text-decoration: none
+				color: rgb(85,85,85)
+				padding-right: 12px
+				border-right: 1px solid rgb(225,225,225)
+				cursor: pointer
+
+				&:hover, &:active
+					text-decoration: underline
+					color: #E84E4E
+

@@ -1,0 +1,40 @@
+main_navigation_title: Main navigation
+mainNavigationItems:
+
+- title: Kancelář
+  url: kancelar.html
+
+- title: Škola
+  url: skola.html
+
+- title: Doplňky
+  url: doplnky.html
+
+- title: Umění
+  url: umeni.html
+
+forehead_strip_navigation_title: Forehread strip navigation - left
+foreheadNavigationItemsLeft:
+
+- title: Přihlásit / <strong>registrovat</strong>
+  url: registration.html
+  mobileVisibility: true
+
+- title: Blog
+  url: blog.html
+  mobileVisibility: false
+
+- title: Pomoc a kontakty
+  url: help-and-contacts.html
+  mobileVisibility: false
+
+forehead_strip_navigation_title: Forehread strip navigation - right
+foreheadNavigationItemsRight:
+
+- title: Sledování zásilek
+  url: package-tracking.html
+  mobileVisibility: false
+
+- title: Košík
+  url: kasket.html
+  mobileVisibility: true
